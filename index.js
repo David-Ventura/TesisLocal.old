@@ -9,6 +9,7 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+app.use(serverroutes);
 
 const server = app.listen(PORT, () => {
   console.log(`Servidor ejecutandose en http://localhost:${PORT}`);
@@ -19,4 +20,3 @@ server.on('error', (error) => {
   });
 
 
-app.use(serverroutes)
